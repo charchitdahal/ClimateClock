@@ -8,6 +8,7 @@
             position: relative;
             text-align: center;
             color: white;
+
         }
 
         .year {
@@ -16,6 +17,18 @@
             position: absolute;
             top: 280px;
             left: 180px;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 20px #fff, 0 0 30px #cc1411, 0 0 40px #cc1411, 0 0 50px #cc1411;            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #cc1411, 0 0 40px #cc1411, 0 0 50px #cc1411;
+            }
         }
 
         .day {
@@ -24,14 +37,20 @@
             position: absolute;
             top: 270px;
             left: 460px;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
         }
 
         .hour {
             font-size: 110px;
             color : #feffc6;
             position: absolute;
-            top: 260px;
+            top: 250px;
             left: 730px;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
         }
 
         .minute {
@@ -40,6 +59,9 @@
             position: absolute;
             top: 250px;
             left: 830px;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
         }
 
         .second {
@@ -48,6 +70,9 @@
             position: absolute;
             top: 250px;
             left: 970px;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
         }
 
         p {
@@ -107,7 +132,7 @@
 </script>
 
 <div class="container">
-<img src="https://www.democracynow.org/images/headlines/73/54573/full_hd/h13-climate-activists-unveil-climate-clock-nyc-ahead-global-climate-strike.jpg" alt="">
+<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/120076383_337725137433350_8907817925764681719_n.jpg?_nc_cat=107&_nc_sid=b96e70&_nc_ohc=Nvsrz5OdAKEAX8344m6&_nc_ht=scontent-sjc3-1.xx&oh=b9cad631351fae8c0b590abf9963f590&oe=5F956EE6" alt="">
 
     <div class="year" id="years"> </div>
 
