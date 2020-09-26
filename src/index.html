@@ -10,84 +10,44 @@
             color: white;
         }
 
-        .years {
-            font-size: 150px;
+        .year {
+            font-size: 140px;
             color : #feffc6;
             position: absolute;
             top: 280px;
             left: 180px;
         }
 
-        .day1 {
-            font-size: 140px;
+        .day {
+            font-size: 120px;
             color : #feffc6;
             position: absolute;
-            top: 260px;
-            left: 380px;
-        }
-
-        .day2 {
-            font-size: 140px;
-            color : #feffc6;
-            position: absolute;
-            top: 260px;
+            top: 270px;
             left: 460px;
         }
 
-        .day3 {
-            font-size: 130px;
+        .hour {
+            font-size: 110px;
             color : #feffc6;
             position: absolute;
             top: 260px;
-            left: 540px;
+            left: 730px;
         }
 
-        .hour1 {
-            font-size: 130px;
+        .minute {
+            font-size: 100px;
             color : #feffc6;
             position: absolute;
             top: 250px;
-            left: 670px;
+            left: 830px;
         }
 
-        .hour2 {
-            font-size: 130px;
+        .second {
+            font-size: 90px;
             color : #feffc6;
             position: absolute;
-            top: 280px;
-            left: 700px;
-        }
-
-        .minute1 {
-            font-size: 130px;
-            color : #feffc6;
-            position: absolute;
-            top: 280px;
-            left: 800px;
-        }
-
-        .minute2 {
-            font-size: 130px;
-            color : #feffc6;
-            position: absolute;
-            top: 280px;
-            left: 900px;
-        }
-
-        .second1 {
-            font-size: 130px;
-            color : #feffc6;
-            position: absolute;
-            top: 280px;
-            left: 1000px;
-        }
-
-        .second2 {
-            font-size: 130px;
-            color : #feffc6;
-            position: absolute;
-            top: 280px;
-            left: 1100px;
+            top: 250px;
+            left: 970px;
         }
 
         p {
@@ -109,11 +69,7 @@
 </head>
 <body>
 
-
-
-<p id="demo"></p>
-
-<script>
+<script type="text/javascript">
     // Set the date we're counting down to
     const countDownDate = new Date("Dec 31, 2027 04:00:00").getTime();
 
@@ -133,9 +89,13 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = years + "y " + days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+
+        document.getElementById("years").innerHTML = years;
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
 
         // If the count down is over, write some text
         if (distance < 0) {
@@ -143,30 +103,29 @@
             document.getElementById("demo").innerHTML = "Un-Reversible Climate Change Damage";
         }
     }, 1000);
+
 </script>
+
 <div class="container">
 <img src="https://www.democracynow.org/images/headlines/73/54573/full_hd/h13-climate-activists-unveil-climate-clock-nyc-ahead-global-climate-strike.jpg" alt="">
-    <div class="years">7</div>
+
+    <div class="year" id="years"> </div>
 
     //Day
-    <div class="day1">1</div>
-    <div class="day2">0</div>
-    <div class="day3">2</div>
+    <div class="day" id="days"></div>
 
     //Hour
-    <div class="hour1">1</div>
-    <div class="hour2">2</div>
+    <div class="hour" id="hours"></div>
 
     //Minute
-    <div class="minute1">1</div>
-    <div class="minute2">1</div>
+    <div class="minute" id="minutes"></div>
 
     //Second
-    <div class="second1">1</div>
-    <div class="second2">2</div>
-
+    <div class="second" id ="seconds"></div>
 
 </div>
+
+<p id="demo" class="years"></p>
 
 </body>
 </html>
